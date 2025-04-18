@@ -2,7 +2,13 @@ import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import { MainNavigation } from "./main-navigation";
 
-export const ShellContainer = (props) => {
+interface ShellContainerProps {
+  children: React.ReactNode;
+  title: string;
+  subtitle: string;
+}
+
+export const ShellContainer = (props: ShellContainerProps) => {
   const { children, title, subtitle } = props;
 
   return (

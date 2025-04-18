@@ -86,6 +86,19 @@ apps/
 
 ```
 
+# Local Environment
+
+To run the applications parallelly
+
+```
+npm run startp
+```
+This will start all the apps and you can access in 
+- Shell `http://localhost:5001`
+- Estimator `http://localhost:5002/home-estimation`
+- Analyser `http://localhost:5003/home-market-analyer` 
+
+---
 
 ### Commands
 
