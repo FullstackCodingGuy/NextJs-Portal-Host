@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@shellapp/ui/button";
 import { MainNavigation } from "@shellapp/ui/main-navigation";
 
