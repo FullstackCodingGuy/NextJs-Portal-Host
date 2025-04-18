@@ -108,3 +108,8 @@ npm run startp
 ```
 pnpm add @shellapp/ui --filter ./apps/shell
 ```
+
+### To add a package inside packages/ui
+```
+pnpm add lodash --filter ./packages/ui
+```

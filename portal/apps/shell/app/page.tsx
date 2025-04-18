@@ -1,12 +1,8 @@
-import { Button } from "@shellapp/ui/button";
-import { MainNavigation } from "@shellapp/ui/main-navigation";
-// import { MainNavigation } from "./components/main-navigation";
+import { ShellContainer } from "@shellapp/ui/shell-container";
 
 export default function Home() {
   return (
-    <div>
-      <MainNavigation />
-      <Button appName={"test"}>Test</Button>
-    </div>
+    <ShellContainer title="Shell" subtitle="Welcome to the Shell App">
+    </ShellContainer>
   );
 }
