@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - shell
+      - home-estimation
+      - home-market-analyser
+
+  shell:
+    build: ./apps/shell
+    ports:
+      - "5001:5001"
+
+  home-estimation:
+    build: ./apps/home-estimation
+    ports:
+      - "5002:5002"
+
+  home-market-analyser:
+    build: ./apps/home-market-analyser
+    ports:
+      - "5003:5003"
