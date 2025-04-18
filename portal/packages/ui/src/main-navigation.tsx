@@ -1,44 +1,38 @@
-// import Link from "next/link";
-// import { useRouter } from "next/router";
+"use client"; // Required at the top
 
-// export const MainNavigation = () => {
-//   const router = useRouter();
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-//   return (
-//     <nav className="bg-white border-gray-200 dark:bg-gray-900">
-//       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-//         <Link href="/">
-//           <a className="text-2xl font-semibold dark:text-white">App</a>
-//         </Link>
-//         <ul className="flex space-x-4">
-//           <li>
-//             <Link href="/">
-//               <a
-//                 className={`${
-//                   router.pathname === "/"
-//                     ? "text-blue-700"
-//                     : "text-gray-900"
-//                 } hover:text-blue-500`}
-//               >
-//                 Home
-//               </a>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link href="/about">
-//               <a
-//                 className={`${
-//                   router.pathname === "/about"
-//                     ? "text-blue-700"
-//                     : "text-gray-900"
-//                 } hover:text-blue-500`}
-//               >
-//                 About
-//               </a>
-//             </Link>
-//           </li>
-//         </ul>
-//       </div>
-//     </nav>
-//   );
-// };
+export const MainNavigation = () => {
+  const pathname = usePathname(); // Use usePathname instead of useRouter for Next.js 13
+
+  const menus = [
+    { name: "Home", path: "/" },
+    { name: "Estimator", path: "/home-estimation" },
+    { name: "Analyser", path: "/home-market-analyser" },
+  ];
+
+  return (
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 mt-6">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link href="/" className="text-2xl font-semibold dark:text-white">
+          Container
+        </Link>
+        <ul className="flex space-x-4 gap-4">
+          {menus.map((menu) => (
+            <li key={menu.name}>
+              <Link
+                href={menu.path}
+                className={`${
+                  pathname === menu.path ? "text-blue-700" : "text-gray-900"
+                } hover:text-blue-500`}
+              >
+                {menu.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
