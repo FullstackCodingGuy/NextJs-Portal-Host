@@ -103,3 +103,8 @@ npx create-turbo@latest
 ```
 npm run startp
 ```
+
+### To add `@shellapp/ui` package into child apps
+```
+pnpm add @shellapp/ui --filter ./apps/shell
+```
