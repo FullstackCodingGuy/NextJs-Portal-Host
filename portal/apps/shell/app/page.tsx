@@ -1,5 +1,5 @@
 import { Button } from "@shellapp/ui/button";
-import { MainNavigation } from "@shellapp/ui/main-navigation";
+import { MainNavigation } from "./components/main-navigation";
 
 export default function Home() {
   return (

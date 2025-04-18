@@ -1,14 +1,44 @@
-import Link from "next/link";
-import "./globals.css";
+// import Link from "next/link";
+// import { useRouter } from "next/router";
 
-export const MainNavigation = () => {
-  return (
-    <header className="p-4 flex gap-4">
-      <h1 className="test-class">Good App</h1>
-      <Link href="/">Shell Application</Link>
-      <Link href="/home-estimation">Estimation</Link>
-      <Link href="/home-market-analyser">Market Analyser</Link>
-   
-    </header>
-  );
-};
+// export const MainNavigation = () => {
+//   const router = useRouter();
+
+//   return (
+//     <nav className="bg-white border-gray-200 dark:bg-gray-900">
+//       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+//         <Link href="/">
+//           <a className="text-2xl font-semibold dark:text-white">App</a>
+//         </Link>
+//         <ul className="flex space-x-4">
+//           <li>
+//             <Link href="/">
+//               <a
+//                 className={`${
+//                   router.pathname === "/"
+//                     ? "text-blue-700"
+//                     : "text-gray-900"
+//                 } hover:text-blue-500`}
+//               >
+//                 Home
+//               </a>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/about">
+//               <a
+//                 className={`${
+//                   router.pathname === "/about"
+//                     ? "text-blue-700"
+//                     : "text-gray-900"
+//                 } hover:text-blue-500`}
+//               >
+//                 About
+//               </a>
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// };
